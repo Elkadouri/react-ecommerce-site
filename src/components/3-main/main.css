@@ -1,0 +1,390 @@
+.main{
+    margin-block: 40px;
+}
+
+/*  ================================  Categories Buttons ================================================= */
+
+.main .categories-btn{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main .categories-btn button{
+    background-color: var(--heroclr);
+    color: #fff;
+    width: 112px;
+    padding: 3px 2px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main .categories-btn button:hover{
+    background-color: var(--red);
+}
+
+.main .categories-btn button:active{
+    scale: 0.90;
+}
+
+.active{
+    background-color: var(--red) !important;
+}
+
+
+/*  ================================  Products ================================================= */
+
+.main .products{
+    width: 100%;
+    margin-block: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+@media (width < 700px) {
+    .main .products {
+        justify-content: center;
+    }
+}
+
+.main .products .card{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 5px 10px 5px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow-mode);
+    animation: cardscale 1s 1 forwards;
+}
+
+@keyframes cardscale {
+    from {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.main .products .card .image{
+    width: 230px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main .products .card .image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.main .products .card .image img:hover{
+    scale: 1.02;
+    rotate: 1deg;
+}
+
+
+.main .products .card .title{
+   color: var(--title);
+}
+
+.main .products .card .price{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.main .products .card .rating{
+  margin-top: -7px; 
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.main .products .card .rating .rate{
+  font-size: 15px;
+}
+
+.main .products .card .rating .filled{
+  color: #FAAF00;
+}
+
+.main .products .card .rating .empty{
+  color:var(--empty);
+}
+
+
+.main .products .card .shop-btn{
+   background-color: #838892;
+   width: 150px;
+   padding: 5px;
+   border-radius: 4px;
+   font-weight: 300;
+   font-size: 14px;
+   transition: 0.3s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5px;
+   color: #fff;
+}
+
+.main .products .card .shop-btn:hover{
+   background-color: var(--red);
+}
+
+.main .products .card .shop-btn:active{
+   scale: 0.90;
+}
+
+.main .products .card .shop-btn .cart-icon{
+   font-size: 15px;
+}
+
+
+
+/* ============================================== Modal =============================================================== */
+
+.main .modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.863);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ============================================== paper container =============================================================== */
+
+
+.main .modal .paper-container{
+    position: relative;
+    height: fit-content;
+    color: var(--bg-primary);
+    background-color: var(--txt-primary);
+    box-shadow: var(--box-shadow-mode);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+/* ================================================= paper ================================================================== */
+
+.main .modal .paper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+/*  ============================================= main img =============================================================== */
+
+.main .modal .paper .main-img{
+  width:180px;
+  height: 270px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  border-radius: 4px;
+  border: 1px solid var(--border-color-mode);
+
+}
+
+.main .modal .paper .main-img:hover{
+  border: 1px solid var(--red);
+
+}
+
+
+@media (width < 767px) {
+    .main .modal .paper .main-img{
+        width: 160px;
+    }
+}
+
+.main .modal .paper .main-img img{
+  max-width: 100%;
+  max-height: 100%;
+ border-radius: 4px;
+}
+
+
+
+/*  ============================================= info =============================================================== */
+
+
+
+.main .modal .paper .info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+/*  ============================================= text =============================================================== */
+
+.main .modal .paper .info .text{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-color-mode);
+    padding: 3px;
+}
+
+.main .modal .paper .info .text .title{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main .modal .paper .info .text .description{
+    width: 150px;
+    font-size: 14px;
+    color: var(--title);
+}
+
+.main .modal .paper .info .text .price{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main .modal .paper .info .text .rating{
+    margin-top: -7px; 
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+  
+  .main .modal .paper .info .text  .rating .rate{
+    font-size: 14px;
+  }
+  
+  .main .modal .paper .info .text  .rating .filled{
+    color: #FAAF00;
+  }
+  
+  .main .modal .paper .info .text  .rating .empty{
+    color:var(--empty);
+  }
+
+
+
+/*  ============================================= tumbnail-imgs =============================================================== */
+
+.main .modal .paper .info .tumbnail-imgs{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.main .modal .paper .info .tumbnail-imgs div{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  border-radius: 4px;
+  border: 1px solid var(--border-color-mode);
+  
+}
+
+
+.main .modal .paper .info .tumbnail-imgs div:hover{
+    border: 1px solid var(--red);
+}
+
+.main .modal .paper .info .tumbnail-imgs div img{
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.main .modal .paper .info .tumbnail-imgs div img:active{
+  scale: 1.1;
+}
+
+
+/*  ============================================= btn-shop =============================================================== */
+
+
+
+.main .paper-container .btn-shop{
+    background-color: #838892;
+    width: 120px;
+    padding: 2px;
+    border: 1px solid var(--border-color-mode);
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 13px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+ }
+ 
+ .main .paper-container .btn-shop:hover{
+    background-color: var(--red);
+ }
+ 
+ .main .paper-container .btn-shop:active{
+    scale: 0.90;
+ }
+ 
+ .main .paper-container .btn-shop .cart-icon{
+    font-size: 15px;
+ }
+
+
+ /* ================================================ close btn ================================================================== */
+
+
+ .main .paper-container .close-btn{
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    font-size: 17px;
+    color: var(--red); 
+ }
+
+
+ .main .paper-container .close-btn:hover{
+   color: red;
+ }
+
+ .main .paper-container .close-btn:active{
+    scale: 0.7;
+ }

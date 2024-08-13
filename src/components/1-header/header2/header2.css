@@ -1,0 +1,155 @@
+.h2 {
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*  ==================================================== Left ================================================ */
+  
+  .h2 .left {
+    
+  }
+  
+  .h2 .left .input-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939bad7e;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  
+  .h2 .left .search-btn{
+    position: absolute;
+    left: 10px;
+    color: #939BAD;
+    padding-right: 12px;
+    border-right: 1px solid #939bad7e ;
+  }
+  
+  .h2 .left input.search {
+    outline: none;
+    padding-block: 6px;
+    padding-left: 50px;
+    border: none;
+    caret-color: #939BAD;
+    width: 400px;
+    background-color: var(--wfff);
+  }
+
+  @media (width < 700px){
+    .h2 .left input.search {
+        width: 250px;
+    }
+  }
+
+  .h2 .left input.search:focus{
+    border: 1px solid var(--red);
+  }
+  
+  .h2 .left input.search::placeholder {
+     color: #939BAD;
+  }
+  
+  .h2 .left .categories {
+     position: absolute;
+     right: 0;
+     color: #939BAD;
+     border-left: 1px solid #939bad7e ;
+     padding-left: 12px;
+     padding-right: 12px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     font-size: 13px;
+     width: 110px;
+     display: flex;
+     align-items: center;
+     justify-content: end;
+     transition: 0.3s;
+  }
+
+  .h2 .left .categories:active{
+    color: #00e1ff;
+  }
+
+  @media (width < 700px){
+    .h2 .left .categories {
+        display: none;
+    }
+  }
+
+  .h2 .left .categories-list{
+    color: #002;
+    position: absolute;
+    z-index: 10;
+    right: 25px;
+    top: 32px;
+    background-color: #fff;
+    width: 110px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #939bad71 , -1px 0px 1px #939bad71;
+    transition: 0.3s;
+    animation: appearance 0.4s 1 forwards;
+  }
+
+  @keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  .h2 .left .categories-list li{
+    font-size: 13px;
+    margin-block: 7px;
+    padding-left: 12px;
+    cursor: pointer;
+    padding-block: 3px;
+    transition: 0.3s;
+  }
+
+  .h2 .left .categories-list li:hover{
+    background-color: var(--wfff);
+  }
+
+
+  /*   ===================================== Right ======================================================== */
+
+
+  
+  .h2 .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .h2 .right .shop , .h2 .right .user{
+    cursor: pointer;
+  }
+  
+  .h2 .right .shop{
+    position: relative;
+    margin-right: 13px;
+  }
+  
+  .h2 .right .shop .badge{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--red);
+    border-radius: 50%;
+    top: -17px;
+    right: -13px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  

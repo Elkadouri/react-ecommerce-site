@@ -1,0 +1,522 @@
+
+       /* ===================================================== .cart-container ============================================================= */
+
+.cart-container{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.973);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    /* ===================================================== .cart ============================================================= */
+
+.cart-container .cart{
+    max-height: 500px; 
+    overflow-y: auto; 
+    background-color: white;
+    width: 600px;
+    position: absolute;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0px -4px 10px rgba(255, 255, 255, 0.1), 0px 4px 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+@media (width < 670px) {
+    .cart-container .cart{
+        width: 350px;
+    }
+}
+
+
+/* Custom scrollbar for WebKit browsers */
+.cart-container .cart::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+ .cart-container  .cart::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Round the corners */
+  }
+  
+.cart-container   .cart::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round the corners */
+    border: 2px solid #f1f1f1; /* Add a border around the thumb */
+  }
+  
+ .cart-container  .cart::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change thumb color on hover */
+  }
+
+
+
+            /* ===================================================== .prod ============================================================= */
+
+
+.cart-container .cart .prod{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+
+        /* ===================================================== .info ============================================================= */
+
+.cart-container .cart .prod .info{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+@media (width < 670px) {
+    .cart-container .cart .prod .info{
+       flex-direction: column;
+       gap: 5px;
+    }
+}
+
+.cart-container .cart .prod .img-container{
+   width: 70px;
+   height: 70px;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 4px;
+}
+
+.cart-container .cart .prod .img-container img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.cart-container .cart .prod .spns{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+
+@media (width < 670px) {
+    .cart-container .cart .prod .spns{
+       flex-direction: column;
+       gap:5px;
+       align-items: center;
+    }
+}
+
+.cart-container .cart .prod .title{
+    color: var(--title);
+}
+
+.cart-container .cart .prod .price{
+    font-weight: 500;
+    font-size: 16px;
+    color: #141313c0;
+}
+
+
+
+@media (width < 670px) {
+    .cart-container .cart .prod .spns .title{
+       text-align: center;
+    }
+}
+
+
+              /* ===================================================== .buy============================================================= */
+
+.cart-container .cart .prod .buy{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+@media (width < 670px) {
+    .cart-container .cart .prod .buy{
+       gap:60px;
+    }
+    .cart-container .cart .prod .buy .minus-plus-quantite{
+       gap: 8px;
+    }
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite button{
+    transition: 0.3s;
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite button:active{
+    scale: 0.80;
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite button:first-child{
+    color: var(--red);
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite .quantite{
+    background-color: var(--heroclr);
+    color: #fff;
+    width: 30px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-container .cart .prod .buy .minus-plus-quantite button:last-child{
+    color: rgb(0, 153, 255);;
+}
+
+.cart-container .cart .prod .buy .buy-or-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+@media (width < 670px) {
+    .cart-container .cart .prod .buy .buy-or-delete{
+       gap: 30px;
+    }
+}
+
+.cart-container .cart .prod .buy .buy-or-delete button{
+   transition: 0.3s;
+}
+
+.cart-container .cart .prod .buy .buy-or-delete button:active{
+   scale: 0.84;
+}
+
+
+.cart-container .cart .prod .buy .buy-or-delete button:first-child{
+   color: var(--red);
+}
+
+.cart-container .cart .prod .buy .buy-or-delete button:first-child:hover{
+    color: red !important;
+}
+
+.cart-container .cart .prod .buy .buy-or-delete button:last-child{
+   color: rgb(0, 153, 255);
+}
+
+.cart-container .cart .prod .buy .buy-or-delete button:last-child:hover{
+   color: rgb(0, 38, 255);
+}
+
+
+
+
+
+
+
+
+
+
+/* ================== close btn ===================  */
+
+.cart .close-btn{
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 17px;
+    color: var(--red); 
+    transition: 0.3s;
+ }
+
+
+ .cart .close-btn:hover{
+   color: red;
+ }
+
+ .cart .close-btn:active{
+    scale: 0.7;
+ }
+
+
+
+
+
+
+ /* ==============================================================  pay-container  ====================================================================== */
+
+
+ .pay-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.986);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ========================================================== pay ========================================================================= */
+
+ .pay-container .pay {
+    width: 600px;
+    background-color: rgba(0, 0, 2, 0.253);
+    color: #fff;
+    position: relative;
+    border-radius: 4px;
+    padding: 30px 20px 30px;
+    border: 1px solid var(--title);
+    box-shadow: 0px -4px 10px rgba(255, 255, 255, 0.1), 0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  @media (width < 700px) {
+    .pay-container .pay{
+        width: 320px;
+    }
+  }
+
+  .pay-container .pay .p-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--title);
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+  .pay-container .pay .p-info .p-title{
+    color: var(--title);
+    font-size: 17px;
+  }
+
+  .pay-container .pay .p-info .p-price{
+    font-size: 19px;
+    font-weight: 300;
+  }
+
+
+  /* ================================================ form ==================================================== */
+
+
+  .pay-container .pay .form{
+    margin-top: 20px;
+  }
+
+  .pay-container .pay .form .card-number{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .pay-container .pay .form .lbl{
+    color: var(--title);
+  }
+
+  .pay-container .pay .form .card-number .wrapper-inp {
+    position: relative;
+  }
+
+  .pay-container .pay .form .card-number .wrapper-inp input{
+    width: 100%;
+    padding: 6px;
+    outline: none;
+    border: 1px solid var(--title);
+    border-radius: 4px;
+    background-color: #00000000;
+    font-size: 15px;
+    transition: 0.3s;
+    color: #fff;
+  }
+
+  .pay-container .pay .form .card-number .wrapper-inp input:focus{
+    border: 1px solid var(--red);
+  }
+
+  .pay-container .pay .form .card-number .wrapper-inp div{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow: hidden;
+  }
+
+  .pay-container .pay .form .card-number .wrapper-inp div img{
+    max-width: 100%;
+    max-height: 90%;
+  }
+
+
+  /* ===================================0 exp-cvc ================================ */
+
+
+  .pay-container .pay .form .evc{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  @media (width < 700px) {
+    .pay-container .pay .form .evc{
+        flex-direction: column;
+        gap: 0px;
+    }
+  }
+
+  .pay-container .pay .form .evc label{
+    flex-grow: 1;
+  }
+
+  
+  @media (width < 700px) {
+    .pay-container .pay .form .evc label{
+        width: 100%;
+    }
+  }
+
+
+
+  .pay-container .pay .form .evc input{
+    transition: 0.3s;
+    padding: 5px;
+    outline: none;
+    border: 1px solid var(--title);
+    border-radius: 4px;
+    background-color: #00000000;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .pay-container .pay .form .evc input:focus{
+    border: 1px solid var(--red);
+  }
+
+  .pay-container .pay .form .exp-cvc{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+
+  .pay-container .pay .form .exp-cvc .cvc-wrapper-inp{
+    position: relative;
+  }
+
+  .pay-container .pay .form .exp-cvc .cvc-wrapper-inp span{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 21px;
+  }
+
+  .pay-container .pay .form .exp-cvc .cvc-wrapper-inp input.cvc{
+    width: 100%;
+  }
+
+  .pay-container .pay .form .exp-cvc input{
+    transition: 0.3s;
+    padding: 5px;
+    outline: none;
+    border: 1px solid var(--title);
+    border-radius: 4px;
+    background-color: #00000000;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .pay-container .pay .form .exp-cvc .country{
+    width: 100%;
+    background-color: #00000000;
+    color: #fff;
+    outline: none;
+    border: 1px solid var(--title);
+    border-radius: 4px;
+    transition: 0.3s;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .pay-container .pay .form .exp-cvc .country:focus{
+    border: 1px solid var(--red);
+  }
+
+  .pay-container .pay .form .exp-cvc input:focus{
+    border: 1px solid var(--red);
+  }
+
+ 
+
+
+
+  .pay-container .pay .form .buy{
+    background-color: var(--heroclr);
+    color: #fff !important;
+    padding: 2px 50px;
+    border: 1px solid var(--title);
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-inline: auto;
+    transition: 0.3s;
+  }
+
+  .pay-container .pay .form .buy:hover{
+    background-color: var(--red);
+  }
+
+  .pay-container .pay .form .buy:disabled{
+    background-color:gray;
+    cursor: no-drop;
+  }
+
+
+
+
+  /* ============================================= close-pay-btn =============================== */
+
+ .pay-container .pay .close-pay-btn {
+    position: absolute;
+    right: 6px;
+    top: 2px;
+    font-size: 17px;
+    color: var(--red) !important; 
+    transition: 0.3s;
+  }
+  
+  .cart .close-pay-btn:hover{
+    color: red;
+  }
+ 
+  .cart .close-pay-btn:active{
+     scale: 0.7;
+  }
+
+

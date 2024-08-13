@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+  --bg-primary: #000;
+  --txt-primary: #fff;
+  --red: #D23F57;
+  --wfff: #F6F9FC;
+  --wf6f6: #F6F6F6 ;
+  --heroclr : #1F2937;
+  --title : #838892 ;
+  /* --empty : #ffffffd7 ; */
+  --empty : #838892 ;
+  --border-color-mode: rgba(0, 0, 0, 0.1);
+  --box-shadow-mode: 0px -4px 10px rgba(255, 255, 255, 0.1), 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.light{
+  --bg-primary: #fff;
+  --txt-primary: #000;
+  --empty : #cecdcdd8;
+  
+  --border-color-mode: rgba(255, 255, 255, 0.1);
+  --box-shadow-mode: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--bg-primary);
+  color: var(--txt-primary);
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  transition: 0.3s;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+ul{
+  list-style: none;
+}
+
+.container{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.border{
+  border: 1px solid red;
+}
+
+
+
+
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Round the corners */
+}
+
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background-color: #2b3445; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round the corners */
+  border: 2px solid #f1f1f1; /* Add a border around the thumb */
+}
+
+html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+  background: #2b3445d7; /* Change thumb color on hover */
+}
+
+

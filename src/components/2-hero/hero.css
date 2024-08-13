@@ -1,0 +1,337 @@
+/* General Hero Section Styling */
+.hero {
+    background-color: var(--wf6f6);
+    margin: 14px 16px;
+    color: var(--txt-primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+/* ===================================== Left Section ========================================================= */
+.hero .left {
+    min-width: 700px;
+    position: relative;
+    background-color: #F9F9F1;
+}
+
+.hero .left img {
+    width: 100%;
+}
+
+@media (max-width: 1199px) {
+    .hero .left img {
+        display: none;
+    }
+    .hero .left {
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero .left {
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .left {
+        min-width: 100%; /* Ensure the left section takes full width */
+    }
+}
+
+.hero .left .info {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .hero .left .info {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 346px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .left .info {
+        width: 100%; /* Ensure the info takes full width */
+        padding: 0 16px; /* Add padding for some spacing */
+    }
+}
+
+.hero .left .info .a,
+.hero .left .info .b,
+.hero .left .info .c,
+.hero .left .info .d,
+.hero .left .info .e {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--heroclr);
+}
+
+.hero .left .info .a,
+.hero .left .info .c {
+    font-size: 30px;
+}
+
+
+.hero .left .info .b {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.hero .left .info .c {
+    font-weight: bold;
+}
+
+.hero .left .info .c span {
+    color: var(--red);
+}
+
+.hero .left .info .d {
+    font-size: 18px;
+    width: 421px;
+    margin-top: 5px;
+}
+
+.hero .left .info .e {
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var(--heroclr);
+    width: fit-content;
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero .left .info .e:hover{
+    background-color: var(--red);
+}
+
+@media (width < 500px) {
+    .hero .left .info .a,
+    .hero .left .info .c{
+        font-size: 20px;
+    }
+    .hero .left .info .b {
+        font-size: 40px;
+    }
+    .hero .left .info .d {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+
+.hero .left .slid-btns{
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero .left .slid-btns span{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid var(--heroclr);
+}
+
+
+.hero .left .slid-moves{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50% , -50%);
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.hero .left .slid-moves button{
+   margin-inline: 5px;
+}
+
+.icon-button {
+    color: #1F2937;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+    color: #D23F57;
+}
+
+
+
+
+/* ===================================== Right Section ========================================================= */
+.hero .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 900px) {
+    .hero .right {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero .right {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero .right img {
+    min-width: 270px;
+}
+
+
+@media (max-width: 600px) {
+    .hero .right img {
+        min-width: 200px;
+    }
+}
+
+.hero .right .img3,
+.hero .right .img4 {
+    position: relative;
+}
+
+.hero .right .info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--heroclr);
+}
+
+.hero .right .info .a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+.hero .right .info .b {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero .right .info .e {
+    line-height: 1;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+    position: relative;
+    width: fit-content;
+}
+
+.hero .right .info .e:hover {
+    color: var(--red);
+}
+
+.hero .right .info .e .line {
+    position: absolute;
+    background-color: var(--red);
+    transition: 0.3s;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+}
+
+.hero .right .info .e:hover .line {
+    width: 100%;
+}
+
+
+
+/*  ===================================================  Hero List Section  ================================================================== */
+
+
+.hero-container .hero-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    margin: 50px 16px 10px;
+    border-radius: 4px;
+    background-color: var(--txt-primary);
+    color: var(--bg-primary);
+    overflow: hidden;
+}
+
+.hero-container .hero-list li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid ;
+    border-radius: 4px;
+    width: 196px;
+    padding: 10px;
+    animation: move 13s infinite linear;
+}
+
+@media (width > 900px) {
+    @keyframes move {
+        0% {
+            opacity: 9;
+            transform: translateX(-1200px);
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(1500px);
+        }
+    }
+}
+
+.hero-container .hero-list li .ico{
+    font-size: 25px;
+}
+
+.hero-container .hero-list li .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-container .hero-list li .text .title{
+    font-weight: 600;
+}
+
+.hero-container .hero-list li .text .subtitle{
+    font-size: 13px;
+}
