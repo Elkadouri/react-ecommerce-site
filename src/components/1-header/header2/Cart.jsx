@@ -18,7 +18,6 @@ export default function Cart({
   productsData,
   setProductsData,
 }) {
-
   if (!Array.isArray(productsData)) {
     return null;
   }
@@ -43,17 +42,19 @@ export default function Cart({
     p: null,
   });
 
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [form , setForm] = useState({cardNum:'' , exp:'' , cvc:'' , country:''});
+  const [form, setForm] = useState({
+    cardNum: "",
+    exp: "",
+    cvc: "",
+    country: "",
+  });
 
-    // Validation functions
-    const validateCardNum = (num) => /^\d{4} \d{4} \d{4} \d{4}$/.test(num);
-    const validateExp = (exp) => /^\d{2}\/\d{2}$/.test(exp);
-    const validateCvc = (cvc) => /^\d{3}$/.test(cvc);
-    const validateCountry = (country) => country.trim().length > 3; // Add more validation if needed
-  
-
+  // Validation functions
+  const validateCardNum = (num) => /^\d{4} \d{4} \d{4} \d{4}$/.test(num);
+  const validateExp = (exp) => /^\d{2}\/\d{2}$/.test(exp);
+  const validateCvc = (cvc) => /^\d{3}$/.test(cvc);
+  const validateCountry = (country) => country.trim().length > 3; // Add more validation if needed
 
   const isFormValid = () => {
     return (
@@ -154,9 +155,9 @@ export default function Cart({
                           <span className="lbl">Card Number</span>
                           <div className="wrapper-inp">
                             <input
-                            onChange={(e) => {
-                              setForm({...form , cardNum:e.target.value})
-                           }} 
+                              onChange={(e) => {
+                                setForm({ ...form, cardNum: e.target.value });
+                              }}
                               value={form.cardNum}
                               required
                               type="text"
@@ -165,9 +166,9 @@ export default function Cart({
                               aria-label="Card Number"
                             />
                             <div>
-                              <img src="/public/images/visa.png" alt="Visa" />
+                              <img src="./images/visa.png" alt="Visa" />
                               <img
-                                src="/public/images/master-card.png"
+                                src="./images/master-card.png"
                                 alt="MasterCard"
                               />
                             </div>
@@ -178,10 +179,10 @@ export default function Cart({
                           <label className="exp-cvc">
                             <span className="lbl">Expiration</span>
                             <input
-                            onChange={(e) => {
-                              setForm({...form , exp:e.target.value})
-                           }} 
-                             value={form.exp}
+                              onChange={(e) => {
+                                setForm({ ...form, exp: e.target.value });
+                              }}
+                              value={form.exp}
                               required
                               type="text"
                               placeholder="MM/YY"
@@ -194,9 +195,9 @@ export default function Cart({
                             <span className="lbl">CVC</span>
                             <div className="cvc-wrapper-inp">
                               <input
-                              onChange={(e) => {
-                                setForm({...form , cvc:e.target.value})
-                             }} 
+                                onChange={(e) => {
+                                  setForm({ ...form, cvc: e.target.value });
+                                }}
                                 value={form.cvc}
                                 className="cvc"
                                 required
@@ -214,11 +215,16 @@ export default function Cart({
 
                         <label className="exp-cvc">
                           <span className="lbl">Country</span>
-                          <input value={form.country} required placeholder="Your Country" 
-                          onChange={(e) => {
-                             setForm({...form , country:e.target.value})
-                          }} 
-                          className="country" type="text" />
+                          <input
+                            value={form.country}
+                            required
+                            placeholder="Your Country"
+                            onChange={(e) => {
+                              setForm({ ...form, country: e.target.value });
+                            }}
+                            className="country"
+                            type="text"
+                          />
                         </label>
 
                         <button

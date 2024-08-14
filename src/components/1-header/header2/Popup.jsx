@@ -18,7 +18,7 @@ export default function Popup({popupDisplay ,setPopupDisplay , setUserDisplay}) 
             <p>Became a <span>KMM Member</span> <br /> and Get <span>50%</span> Discount !</p>
 
             <div className='img-discount'>
-                <img src="/public/images/discount.jpeg" alt="" />
+                <img src="./images/discount.jpeg" alt="" />
             </div>
 
            <button className='subscribe-btn' onClick={() => {
