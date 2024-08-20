@@ -159,11 +159,13 @@ export default function Cart({
                                 setForm({ ...form, cardNum: e.target.value });
                               }}
                               value={form.cardNum}
+                              name="card-number"
                               required
                               type="text"
                               placeholder="1234 1234 1234 1234"
                               pattern="\d{4} \d{4} \d{4} \d{4}"
                               aria-label="Card Number"
+                              autoComplete="off"
                             />
                             <div>
                               <img src="./images/visa.png" alt="Visa" />
@@ -183,11 +185,13 @@ export default function Cart({
                                 setForm({ ...form, exp: e.target.value });
                               }}
                               value={form.exp}
+                              name="expiration"
                               required
                               type="text"
                               placeholder="MM/YY"
                               pattern="\d{2}/\d{2}"
                               aria-label="Expiration Date"
+                              autoComplete="off"
                             />
                           </label>
 
@@ -199,12 +203,14 @@ export default function Cart({
                                   setForm({ ...form, cvc: e.target.value });
                                 }}
                                 value={form.cvc}
+                                name="cvc"
                                 className="cvc"
                                 required
                                 type="text"
                                 placeholder="000"
                                 pattern="\d{3}"
                                 aria-label="CVC"
+                                autoComplete="off"
                               />
                               <span>
                                 <FontAwesomeIcon icon={faCreditCard} />
@@ -217,6 +223,7 @@ export default function Cart({
                           <span className="lbl">Country</span>
                           <input
                             value={form.country}
+                            name="country"
                             required
                             placeholder="Your Country"
                             onChange={(e) => {
@@ -224,6 +231,7 @@ export default function Cart({
                             }}
                             className="country"
                             type="text"
+                            autoComplete="off"
                           />
                         </label>
 

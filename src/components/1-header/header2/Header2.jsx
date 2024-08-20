@@ -40,6 +40,7 @@ export default function Header2({setActive , setDisplay , productsData , setUser
            </a>
            
            <input value={search} 
+                  name="search"
                   onChange={(e) => {
                     setSearch(e.target.value)
                   }}

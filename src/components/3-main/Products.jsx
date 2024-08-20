@@ -16,9 +16,9 @@ export const products = [
     category: "Fashion",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/fashion/jacket1.webp",
-      "src/components/3-main/products-imgs/fashion/jacket2.webp",
-      "src/components/3-main/products-imgs/fashion/jacket3.webp",
+      "./images/products-imgs/fashion/jacket1.webp",
+      "./images/products-imgs/fashion/jacket2.webp",
+      "./images/products-imgs/fashion/jacket3.webp",
     ],
   },
   {
@@ -29,9 +29,9 @@ export const products = [
     category: "Fashion",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/fashion/bag1.jpg",
-      "src/components/3-main/products-imgs/fashion/bag2.jpg",
-      "src/components/3-main/products-imgs/fashion/bag3.jpg",
+      "./images/products-imgs/fashion/bag1.jpg",
+      "./images/products-imgs/fashion/bag2.jpg",
+      "./images/products-imgs/fashion/bag3.jpg",
     ],
   },
   {
@@ -42,9 +42,9 @@ export const products = [
     category: "Fashion",
     rating: 5,
     images: [
-      "src/components/3-main/products-imgs/fashion/watch1.jpg",
-      "src/components/3-main/products-imgs/fashion/watch2.jpg",
-      "src/components/3-main/products-imgs/fashion/watch3.jpg",
+      "./images/products-imgs/fashion/watch1.jpg",
+      "./images/products-imgs/fashion/watch2.jpg",
+      "./images/products-imgs/fashion/watch3.jpg",
     ],
   },
   {
@@ -55,9 +55,9 @@ export const products = [
     category: "Fashion",
     rating: 2.5,
     images: [
-      "src/components/3-main/products-imgs/fashion/boot1.jpg",
-      "src/components/3-main/products-imgs/fashion/boot2.jpg",
-      "src/components/3-main/products-imgs/fashion/boot3.jpg",
+      "./images/products-imgs/fashion/boot1.jpg",
+      "./images/products-imgs/fashion/boot2.jpg",
+      "./images/products-imgs/fashion/boot3.jpg",
     ],
   },
   {
@@ -68,9 +68,9 @@ export const products = [
     category: "Fashion",
     rating: 4,
     images: [
-      "src/components/3-main/products-imgs/fashion/scarf1.jpg",
-      "src/components/3-main/products-imgs/fashion/scarf2.jpg",
-      "src/components/3-main/products-imgs/fashion/scarf3.jpg",
+      "./images/products-imgs/fashion/scarf1.jpg",
+      "./images/products-imgs/fashion/scarf2.jpg",
+      "./images/products-imgs/fashion/scarf3.jpg",
     ],
   },
 
@@ -83,9 +83,9 @@ export const products = [
     category: "Jewelry",
     rating: 4.5,
     images: [
-      "src/components/3-main/products-imgs/jewlery/gold-necklace1.jpg",
-      "src/components/3-main/products-imgs/jewlery/gold-necklace2.jpg",
-      "src/components/3-main/products-imgs/jewlery/gold-necklace3.jpg",
+      "./images/products-imgs/jewlery/gold-necklace1.jpg",
+      "./images/products-imgs/jewlery/gold-necklace2.jpg",
+      "./images/products-imgs/jewlery/gold-necklace3.jpg",
     ],
   },
   {
@@ -96,9 +96,9 @@ export const products = [
     category: "Jewelry",
     rating: 2.5,
     images: [
-      "src/components/3-main/products-imgs/jewlery/diamond-ring1.jpg",
-      "src/components/3-main/products-imgs/jewlery/diamond-ring2.jpg",
-      "src/components/3-main/products-imgs/jewlery/diamond-ring3.jpg",
+      "./images/products-imgs/jewlery/diamond-ring1.jpg",
+      "./images/products-imgs/jewlery/diamond-ring2.jpg",
+      "./images/products-imgs/jewlery/diamond-ring3.jpg",
     ],
   },
   {
@@ -109,9 +109,9 @@ export const products = [
     category: "Jewelry",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/jewlery/bracelet1.jpg",
-      "src/components/3-main/products-imgs/jewlery/bracelet2.jpg",
-      "src/components/3-main/products-imgs/jewlery/bracelet3.jpg",
+      "./images/products-imgs/jewlery/bracelet1.jpg",
+      "./images/products-imgs/jewlery/bracelet2.jpg",
+      "./images/products-imgs/jewlery/bracelet3.jpg",
     ],
   },
   {
@@ -122,9 +122,9 @@ export const products = [
     category: "Jewelry",
     rating: 1.5,
     images: [
-      "src/components/3-main/products-imgs/jewlery/earrings1.jpg",
-      "src/components/3-main/products-imgs/jewlery/earrings2.jpg",
-      "src/components/3-main/products-imgs/jewlery/earrings3.jpg",
+      "./images/products-imgs/jewlery/earrings1.jpg",
+      "./images/products-imgs/jewlery/earrings2.jpg",
+      "./images/products-imgs/jewlery/earrings3.jpg",
     ],
   },
   {
@@ -135,9 +135,9 @@ export const products = [
     category: "Jewelry",
     rating: 3,
     images: [
-      "src/components/3-main/products-imgs/jewlery/paltinum-watch1.jpg",
-      "src/components/3-main/products-imgs/jewlery/paltinum-watch2.jpg",
-      "src/components/3-main/products-imgs/jewlery/paltinum-watch3.jpg",
+      "./images/products-imgs/jewlery/paltinum-watch1.jpg",
+      "./images/products-imgs/jewlery/paltinum-watch2.jpg",
+      "./images/products-imgs/jewlery/paltinum-watch3.jpg",
     ],
   },
 
@@ -150,9 +150,9 @@ export const products = [
     category: "Clothes",
     rating: 4,
     images: [
-      "src/components/3-main/products-imgs/clothes/dress1.jpg",
-      "src/components/3-main/products-imgs/clothes/dress2.jpg",
-      "src/components/3-main/products-imgs/clothes/dress3.jpg",
+      "./images/products-imgs/clothes/dress1.jpg",
+      "./images/products-imgs/clothes/dress2.jpg",
+      "./images/products-imgs/clothes/dress3.jpg",
     ],
   },
   {
@@ -163,9 +163,9 @@ export const products = [
     category: "Clothes",
     rating: 5,
     images: [
-      "src/components/3-main/products-imgs/clothes/suit1.jpg",
-      "src/components/3-main/products-imgs/clothes/suit2.jpg",
-      "src/components/3-main/products-imgs/clothes/suit3.jpg",
+      "./images/products-imgs/clothes/suit1.jpg",
+      "./images/products-imgs/clothes/suit2.jpg",
+      "./images/products-imgs/clothes/suit3.jpg",
     ],
   },
   {
@@ -176,9 +176,9 @@ export const products = [
     category: "Clothes",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/clothes/coat1.jpg",
-      "src/components/3-main/products-imgs/clothes/coat2.jpg",
-      "src/components/3-main/products-imgs/clothes/coat3.jpg",
+      "./images/products-imgs/clothes/coat1.jpg",
+      "./images/products-imgs/clothes/coat2.jpg",
+      "./images/products-imgs/clothes/coat3.jpg",
     ],
   },
   {
@@ -189,9 +189,9 @@ export const products = [
     category: "Clothes",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/clothes/shirt1.jpg",
-      "src/components/3-main/products-imgs/clothes/shirt2.jpg",
-      "src/components/3-main/products-imgs/clothes/shirt3.jpg",
+      "./images/products-imgs/clothes/shirt1.jpg",
+      "./images/products-imgs/clothes/shirt2.jpg",
+      "./images/products-imgs/clothes/shirt3.jpg",
     ],
   },
   {
@@ -202,9 +202,9 @@ export const products = [
     category: "Clothes",
     rating: 0.5,
     images: [
-      "src/components/3-main/products-imgs/clothes/jeans1.jpg",
-      "src/components/3-main/products-imgs/clothes/jeans2.jpg",
-      "src/components/3-main/products-imgs/clothes/jeans3.jpg",
+      "./images/products-imgs/clothes/jeans1.jpg",
+      "./images/products-imgs/clothes/jeans2.jpg",
+      "./images/products-imgs/clothes/jeans3.jpg",
     ],
   },
 
@@ -218,9 +218,9 @@ export const products = [
     category: "Electronics",
     rating: 2.5,
     images: [
-      "src/components/3-main/products-imgs/electronics/game-laptop1.jpg",
-      "src/components/3-main/products-imgs/electronics/game-laptop2.jpg",
-      "src/components/3-main/products-imgs/electronics/game-laptop3.jpg",
+      "./images/products-imgs/electronics/game-laptop1.jpg",
+      "./images/products-imgs/electronics/game-laptop2.jpg",
+      "./images/products-imgs/electronics/game-laptop3.jpg",
     ],
   },
   {
@@ -231,9 +231,9 @@ export const products = [
     category: "Electronics",
     rating: 2.5,
     images: [
-      "src/components/3-main/products-imgs/electronics/smartphone1.jpg",
-      "src/components/3-main/products-imgs/electronics/smartphone2.jpg",
-      "src/components/3-main/products-imgs/electronics/smartphone3.jpg",
+      "./images/products-imgs/electronics/smartphone1.jpg",
+      "./images/products-imgs/electronics/smartphone2.jpg",
+      "./images/products-imgs/electronics/smartphone3.jpg",
     ],
   },
   {
@@ -244,9 +244,9 @@ export const products = [
     category: "Electronics",
     rating: 1.5,
     images: [
-      "src/components/3-main/products-imgs/electronics/speaker1.jpg",
-      "src/components/3-main/products-imgs/electronics/speaker2.jpg",
-      "src/components/3-main/products-imgs/electronics/speaker3.jpg",
+      "./images/products-imgs/electronics/speaker1.jpg",
+      "./images/products-imgs/electronics/speaker2.jpg",
+      "./images/products-imgs/electronics/speaker3.jpg",
     ],
   },
   {
@@ -257,9 +257,9 @@ export const products = [
     category: "Electronics",
     rating: 3.5,
     images: [
-      "src/components/3-main/products-imgs/electronics/4k-tv1.jpg",
-      "src/components/3-main/products-imgs/electronics/4k-tv2.jpg",
-      "src/components/3-main/products-imgs/electronics/4k-tv3.jpg",
+      "./images/products-imgs/electronics/4k-tv1.jpg",
+      "./images/products-imgs/electronics/4k-tv2.jpg",
+      "./images/products-imgs/electronics/4k-tv3.jpg",
     ],
   },
   {
@@ -270,9 +270,9 @@ export const products = [
     category: "Electronics",
     rating: 0,
     images: [
-      "src/components/3-main/products-imgs/electronics/bluetooth-head1.jpg",
-      "src/components/3-main/products-imgs/electronics/bluetooth-head2.jpg",
-      "src/components/3-main/products-imgs/electronics/bluetooth-head3.jpg",
+      "./images/products-imgs/electronics/bluetooth-head1.jpg",
+      "./images/products-imgs/electronics/bluetooth-head2.jpg",
+      "./images/products-imgs/electronics/bluetooth-head3.jpg",
     ],
   },
 ];
