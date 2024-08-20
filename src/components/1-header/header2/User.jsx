@@ -1,7 +1,6 @@
 import "./user.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark , faEye } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faEye } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
 // eslint-disable-next-line react/prop-types
@@ -25,7 +24,7 @@ export default function User({ userDisplay, setUserDisplay }) {
   };
 
   useEffect(() => {
-    
+    // Any necessary effects based on usersInfoList
   }, [usersInfoList]);
 
   const handleSubmit = (e) => {
@@ -54,12 +53,11 @@ export default function User({ userDisplay, setUserDisplay }) {
     }, 2500);
   };
 
-
-  const [tp , setTp] = useState("password");
+  const [tp, setTp] = useState("password");
 
   return (
     <div style={{ display: userDisplay }} className="user-container">
-      <form  method="post" action="" className="user" onSubmit={handleSubmit}>
+      <form method="post" action="" className="user" onSubmit={handleSubmit}>
         <label>
           Username
           <input
@@ -88,37 +86,32 @@ export default function User({ userDisplay, setUserDisplay }) {
         </label>
         <label>
           Password
-
           <div className="wrap-inp">
             <input
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               autoComplete="off"
-              type={tp} // Changed to password type for security
+              type={tp}
               id="password"
               name="password"
               required
               placeholder="Password"
             />
-
-            <span onClick={() => {
-                setTp(tp === "password" ? "text" : "password")
-            }} className="eye-btn">
-                <FontAwesomeIcon icon={faEye} />
+            <span
+              onClick={() => setTp(tp === "password" ? "text" : "password")}
+              className="eye-btn"
+            >
+              <FontAwesomeIcon icon={faEye} />
             </span>
           </div>
-
         </label>
         <button type="submit" disabled={!isFormValid()} className="sub-scribe">
           Subscribe
         </button>
         {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
         {successMessage && (
-          <p style={{ color: "green", textAlign: "center" }}>
-            {successMessage}
-          </p>
-        )}{" "}
-        {/* Success message */}
+          <p style={{ color: "green", textAlign: "center" }}>{successMessage}</p>
+        )}
         <button onClick={() => setUserDisplay("none")} className="close-user">
           <FontAwesomeIcon icon={faXmark} />
         </button>

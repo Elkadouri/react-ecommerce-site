@@ -11,28 +11,25 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
-// eslint-disable-next-line react/prop-types, no-unused-vars
+// eslint-disable-next-line react/prop-types
 export default function Cart({
   display,
   setDisplay,
   productsData,
   setProductsData,
 }) {
-  if (!Array.isArray(productsData)) {
-    return null;
+  if (!Array.isArray(productsData) || productsData.some(p => !p)) {
+    return <p style={{ color: "#000", textAlign: "center" }}>Your cart is empty!</p>;
   }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const updatDataProducts = productsData.filter((pr) => pr.quantite > 0);
+    const updateDataProducts = productsData.filter((pr) => pr.quantite > 0);
 
-    // Check if the filtered data is different from the current data
-    if (JSON.stringify(updatDataProducts) !== JSON.stringify(productsData)) {
-      setProductsData(updatDataProducts);
+    if (JSON.stringify(updateDataProducts) !== JSON.stringify(productsData)) {
+      setProductsData(updateDataProducts);
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsData]);
+  }, [productsData, setProductsData]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [payDisplay, setPayDisplay] = useState({
@@ -50,11 +47,10 @@ export default function Cart({
     country: "",
   });
 
-  // Validation functions
   const validateCardNum = (num) => /^\d{4} \d{4} \d{4} \d{4}$/.test(num);
   const validateExp = (exp) => /^\d{2}\/\d{2}$/.test(exp);
   const validateCvc = (cvc) => /^\d{3}$/.test(cvc);
-  const validateCountry = (country) => country.trim().length > 3; // Add more validation if needed
+  const validateCountry = (country) => country.trim().length > 3;
 
   const isFormValid = () => {
     return (
@@ -63,6 +59,14 @@ export default function Cart({
       validateCvc(form.cvc) &&
       validateCountry(form.country)
     );
+  };
+
+  const handleBuyClick = (e) => {
+    e.preventDefault();
+    if (isFormValid()) {
+      // Handle purchase logic here
+      setProductsData([]);
+    }
   };
 
   return (
@@ -89,7 +93,7 @@ export default function Cart({
                     onClick={() => {
                       const updatedProducts = productsData.map((p) =>
                         p.id === product.id
-                          ? { ...p, quantite: p.quantite - 1 }
+                          ? { ...p, quantite: Math.max(0, p.quantite - 1) }
                           : p
                       );
                       setProductsData(updatedProducts);
@@ -115,17 +119,14 @@ export default function Cart({
                 <div className="buy-or-delete">
                   <button
                     onClick={() => {
-                      const updatDataProducts = productsData.filter((pr) => {
-                        return pr.id !== product.id;
-                      });
-
-                      setProductsData(updatDataProducts);
+                      const updatedDataProducts = productsData.filter((pr) =>
+                        pr.id !== product.id
+                      );
+                      setProductsData(updatedDataProducts);
                     }}
                   >
                     <FontAwesomeIcon fontSize={"15px"} icon={faTrashAlt} />
                   </button>
-
-                  {/* ================================================================================================================================== */}
 
                   <div
                     className="pay-container"
@@ -237,12 +238,7 @@ export default function Cart({
 
                         <button
                           disabled={!isFormValid()}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTimeout(() => {
-                              location.reload();
-                            }, 1000);
-                          }}
+                          onClick={handleBuyClick}
                           className="buy"
                         >
                           Buy
@@ -264,8 +260,6 @@ export default function Cart({
                       </button>
                     </div>
                   </div>
-
-                  {/* ================================================================================================================================== */}
 
                   <button
                     onClick={() =>

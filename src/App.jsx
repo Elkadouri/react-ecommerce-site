@@ -1,4 +1,3 @@
-
 import './App.css'
 import Header from './components/1-header/Header'
 import Hero from './components/2-hero/Hero'
@@ -21,80 +20,59 @@ function App() {
   const [display , setDisplay] = useState('none');
 
   useEffect(() => {
-    window.addEventListener('scroll' , () => {
-      if (scrollY >= 200){
-        setUp({opacity:1 , showHide:'show'})
-      } else{
-        setUp({opacity:0 , showHide:'hide'})
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        setUp({opacity:1 , showHide:'show'});
+      } else {
+        setUp({opacity:0 , showHide:'hide'});
       }
-    })
-  }, [])
+    };
 
+    window.addEventListener('scroll', handleScroll);
 
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const [productsData, setProductsData] = useState(localStorage.products.length > 0 ? JSON.parse(localStorage.products) : [])
+  const [productsData, setProductsData] = useState(() => {
+    const storedProducts = localStorage.getItem('products');
+    return storedProducts && storedProducts.length > 0 ? JSON.parse(storedProducts) : [];
+  });
 
   useEffect(() => {
-    localStorage.setItem('products' , JSON.stringify(productsData));
-  }, [productsData])
-
-
+    localStorage.setItem('products', JSON.stringify(productsData));
+  }, [productsData]);
 
   const [userDisplay , setUserDisplay] = useState('none');
-
   const [popupDisplay , setPopupDisplay] = useState('none');
-
   const [search , setSearch] = useState('');
 
- 
   return (
     <>
-
-       <Header 
-          active={active} setActive={setActive}
-          display={display} setDisplay={setDisplay}
-          productsData={productsData}
-          search={search} setSearch={setSearch}
-
-          setUserDisplay={setUserDisplay}
-          popupDisplay={popupDisplay} setPopupDisplay={setPopupDisplay}
-          />
-       <Hero/>
-       <Main 
-          active={active} setActive={setActive}
-          display={display} setDisplay={setDisplay}
-          productsData={productsData} setProductsData={setProductsData}
-          search={search} setSearch={setSearch}
-          />
-
-
-        <Footer/>
-
-
-
-       <button onClick={() => {
-          window.scrollTo(0, 0);
-       }} style={{opacity:up.opa}} className={ `scrool-up ${up.showHide} `}>
-         <FontAwesomeIcon icon={faChevronUp} />
-       </button>
-
-
-       <Cart display={display} setDisplay={setDisplay}
-             productsData={productsData} setProductsData={setProductsData}
-       />
-
-
-       <User userDisplay={userDisplay} setUserDisplay={setUserDisplay} />
-
-
-     
-        <Popup   popupDisplay={popupDisplay} setPopupDisplay={setPopupDisplay}
-                 setUserDisplay={setUserDisplay}
-         />
-   
- 
+      <Header 
+        active={active} setActive={setActive}
+        display={display} setDisplay={setDisplay}
+        productsData={productsData}
+        search={search} setSearch={setSearch}
+        setUserDisplay={setUserDisplay}
+        popupDisplay={popupDisplay} setPopupDisplay={setPopupDisplay}
+      />
+      <Hero/>
+      <Main 
+        active={active} setActive={setActive}
+        display={display} setDisplay={setDisplay}
+        productsData={productsData} setProductsData={setProductsData}
+        search={search} setSearch={setSearch}
+      />
+      <Footer/>
+      <button onClick={() => window.scrollTo(0, 0)} style={{opacity: up.opa}} className={`scrool-up ${up.showHide}`}>
+        <FontAwesomeIcon icon={faChevronUp} />
+      </button>
+      <Cart display={display} setDisplay={setDisplay} productsData={productsData} setProductsData={setProductsData} />
+      <User userDisplay={userDisplay} setUserDisplay={setUserDisplay} />
+      <Popup popupDisplay={popupDisplay} setPopupDisplay={setPopupDisplay} setUserDisplay={setUserDisplay} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
